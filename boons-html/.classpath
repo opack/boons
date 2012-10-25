@@ -8,6 +8,6 @@
 	<classpathentry kind="lib" path="/boons-game/libs/gdx-sources.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt.jar" sourcepath="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
 	<classpathentry kind="lib" path="war/WEB-INF/lib/gdx-backend-gwt-sources.jar"/>
-	<classpathentry kind="var" path="ECLIPSE_HOME/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201203300216-rel-r37/gwt-2.4.0/gwt-servlet.jar"/>
+	<classpathentry kind="var" path="GWT/gwt-servlet.jar"/>
 	<classpathentry kind="output" path="war/WEB-INF/classes"/>
 </classpath>
