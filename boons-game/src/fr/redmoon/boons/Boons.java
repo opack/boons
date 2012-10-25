@@ -8,6 +8,8 @@ import fr.redmoon.boons.screens.SplashScreen;
 
 public class Boons extends Game {
 	public static final String LOG = Boons.class.getSimpleName();
+	public static int PIXELS_PER_METER = 16;
+	
 	private FPSLogger fpsLogger;
 
 	public SplashScreen getSplashScreen() {
