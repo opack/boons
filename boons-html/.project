@@ -25,4 +25,17 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>com.google.gwt.eclipse.core.gwtNature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>war/WEB-INF/lib/gwt-servlet.jar</name>
+			<type>1</type>
+			<locationURI>ECLIPSE_HOME/plugins/com.google.gwt.eclipse.sdkbundle_2.4.0.v201208080120-rel-r37/gwt-2.4.0/gwt-servlet.jar</locationURI>
+		</link>
+	</linkedResources>
+	<variableList>
+		<variable>
+			<name>LIBGDX</name>
+			<value>file:/C:/Progz/dev/libgdx-nightly-latest_0.9.6</value>
+		</variable>
+	</variableList>
 </projectDescription>

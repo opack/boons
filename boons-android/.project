@@ -30,6 +30,18 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<linkedResources>
+		<link>
+			<name>libs/armeabi</name>
+			<type>2</type>
+			<locationURI>LIBGDX/armeabi</locationURI>
+		</link>
+		<link>
+			<name>libs/armeabi-v7a</name>
+			<type>2</type>
+			<locationURI>LIBGDX/armeabi-v7a</locationURI>
+		</link>
+	</linkedResources>
 	<variableList>
 		<variable>
 			<name>LIBGDX</name>
