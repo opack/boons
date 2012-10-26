@@ -5,7 +5,8 @@
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
 	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/boons-game"/>
-	<classpathentry exported="true" kind="lib" path="/boons-game/libs/gdx.jar" sourcepath="/boons-game/libs/gdx-sources.jar"/>
-	<classpathentry exported="true" kind="lib" path="libs/gdx-backend-android.jar" sourcepath="libs/gdx-backend-android-sources.jar"/>
+	<classpathentry exported="true" kind="var" path="LIBGDX/gdx-backend-android.jar"/>
+	<classpathentry exported="true" kind="var" path="LIBGDX/gdx.jar"/>
+	<classpathentry kind="var" path="LIBGDX/sources/gdx-backend-android-sources.jar"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>

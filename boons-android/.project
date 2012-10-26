@@ -30,4 +30,10 @@
 		<nature>com.android.ide.eclipse.adt.AndroidNature</nature>
 		<nature>org.eclipse.jdt.core.javanature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>LIBGDX</name>
+			<value>file:/C:/Progz/dev/libgdx-nightly-latest_0.9.6</value>
+		</variable>
+	</variableList>
 </projectDescription>
