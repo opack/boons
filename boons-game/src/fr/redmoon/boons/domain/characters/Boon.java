@@ -7,12 +7,11 @@ import fr.redmoon.boons.domain.map.World;
  * @author Yed
  *
  */
-public class Boon {
+public class Boon extends Character {
 	private World world;
 	private Genre genre;
 	private int age;
 	private int deathDay;
-	private CharacterKind kind;
 	public World getWorld() {
 		return world;
 	}
@@ -36,11 +35,5 @@ public class Boon {
 	}
 	public void setDeathDay(int deathDay) {
 		this.deathDay = deathDay;
-	}
-	public CharacterKind getKind() {
-		return kind;
-	}
-	public void setKind(CharacterKind kind) {
-		this.kind = kind;
 	}
 }

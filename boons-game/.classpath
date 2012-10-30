@@ -3,7 +3,7 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="assets"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
-	<classpathentry exported="true" kind="var" path="LIBGDX/gdx.jar"/>
+	<classpathentry exported="true" kind="var" path="LIBGDX/gdx.jar" sourcepath="/LIBGDX/sources/gdx-sources.jar"/>
 	<classpathentry kind="var" path="LIBGDX/sources/gdx-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

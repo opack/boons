@@ -1,5 +1,6 @@
 package fr.redmoon.boons.domain.map;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -13,5 +14,17 @@ import java.util.List;
  */
 public class Region {
 	private String generationCode;
-	private List<IBlock> blocks;
+	private List<Block> blocks;
+	
+	public Region() {
+		blocks = new ArrayList<Block>();
+	}
+	
+	public void addBlock(Block block) {
+		blocks.add(block);
+	}
+	
+	public List<Block> getBlocks() {
+		return blocks;
+	}
 }

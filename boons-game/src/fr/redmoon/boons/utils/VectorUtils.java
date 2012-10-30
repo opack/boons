@@ -1,6 +1,7 @@
 package fr.redmoon.boons.utils;
 
 import com.badlogic.gdx.math.Vector2;
+import com.badlogic.gdx.math.Vector3;
 
 public class VectorUtils
 {
@@ -13,6 +14,28 @@ public class VectorUtils
      */
     public static boolean adjustByRangeX(
         Vector2 vector,
+        float min,
+        float max )
+    {
+        if( vector.x < min ) {
+            vector.x = min;
+            return true;
+        } else if( vector.x > max ) {
+            vector.x = max;
+            return true;
+        }
+        return false;
+    }
+    
+    /**
+     * Checks if the vector's X coordinate is inside the range [min,max],
+     * adjusting it if needed.
+     * <p>
+     * Returns <code>true</code> if the value was adjusted, <code>false</code>
+     * otherwise.
+     */
+    public static boolean adjustByRangeX(
+        Vector3 vector,
         float min,
         float max )
     {

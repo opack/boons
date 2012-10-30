@@ -5,7 +5,7 @@ package fr.redmoon.boons.domain.characters;
  * Les différents types de personnage.
  */
 public enum CharacterKind {
-	HERO("hero");
+	BOON("hero");
 
 	private final String name;
 

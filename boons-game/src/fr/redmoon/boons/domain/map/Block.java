@@ -1,5 +1,6 @@
 package fr.redmoon.boons.domain.map;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import fr.redmoon.boons.domain.entity.IEntity;
@@ -12,21 +13,37 @@ import fr.redmoon.boons.domain.entity.IEntity;
  * @author Yed
  * 
  */
-public interface IBlock {
+public class Block {
+	private final String id;
+	private final String background;
+	private final List<IEntity> entities;
+	
+	public Block(String id, String background) {
+		this.id = id;
+		this.background = background;
+		entities = new ArrayList<IEntity>();
+	}
+	
 	/**
 	 * Retourne l'identifiant du bloc
 	 * @return
 	 */
-	String getId();
+	public String getId() {
+		return id;
+	}
 	
 	/**
 	 * Retourne l'image de fond du bloc
 	 * @return
 	 */
-	String getBackground();
+	public String getBackground(){
+		return background;
+	}
 	
 	/**
 	 * Retourne la liste des entités du bloc.
 	 */
-	List<IEntity> getEntities();
+	public List<IEntity> getEntities() {
+		return entities;
+	}
 }

@@ -4,6 +4,7 @@ import static fr.redmoon.boons.Boons.PIXELS_PER_METER;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
+import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -61,19 +62,27 @@ public abstract class AbstractScreen implements Screen {
 	
 	@Override
 	public void render(float delta) {
-		// (1) Réaliser la game logic
-
+	// (1) Réaliser la game logic
 		// Mettre à jour les acteurs
 		stage.act(delta);
 
-		// (2) Dessiner le résultat
+		// Mettre à jour la caméra
+		updateCamera(stage.getCamera());
 
+	// (2) Dessiner le résultat
 		// Effacer l'écran
 		Gdx.gl.glClearColor(0f, 0f, 0f, 1f);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		// Dessiner les acteurs
 		stage.draw();
+	}
+
+	/**
+	 * C'est ici qu'on met à jour la position de la caméra
+	 * @param camera
+	 */
+	protected void updateCamera(Camera camera) {
 	}
 
 	@Override

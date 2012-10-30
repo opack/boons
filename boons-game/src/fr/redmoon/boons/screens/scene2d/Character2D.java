@@ -18,13 +18,13 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Array;
 
-import fr.redmoon.boons.domain.characters.Boon;
+import fr.redmoon.boons.domain.characters.Character;
 import fr.redmoon.boons.utils.VectorUtils;
 
 /**
- * The ship's 2D representation.
+ * Un bonhomme qui peut se déplacer en marchant.
  */
-public class Boon2D extends Image {
+public class Character2D extends Image {
 	/**
 	 * La vitesse de déplacement du boon, en mètres par seconde. En se basant
 	 * sur une vitesse de marche de 5km/h, on obtient 1.4m/s.
@@ -32,6 +32,11 @@ public class Boon2D extends Image {
 	private static final float SPEED = 1.4f * PIXELS_PER_METER;
 	
 	private final Vector2 position;
+	
+	/**
+	 * Position maximale en X
+	 */
+	private float maxX;
 	
 	/**
      * La vitesse actuelle du boon.
@@ -63,9 +68,9 @@ public class Boon2D extends Image {
 	private final Drawable standFrame;
 	
 	/**
-	 * Crée un nouveau Boon {@link Boon2D}.
+	 * Crée un nouveau personnage {@link Character2D}.
 	 */
-	private Boon2D(Boon boon, AtlasRegion standFrame, Array<AtlasRegion> walkAnimationFrames) {
+	private Character2D(Character character, AtlasRegion standFrame, Array<AtlasRegion> walkAnimationFrames) {
 		super(walkAnimationFrames.get(0));
 		setTouchable(Touchable.disabled);
 		
@@ -86,15 +91,16 @@ public class Boon2D extends Image {
 	}
 
 	/**
-	 * Factory chargée de créer un {@link Boon2D} 
+	 * Factory chargée de créer un {@link Character2D} 
 	 */
-	public static Boon2D create(Boon boon, TextureAtlas textureAtlas) {
+	public static Character2D create(Character character, TextureAtlas textureAtlas) {
 		// Chargement des régions du bonhomme dans l'atlas d'images
-		AtlasRegion standRegion = textureAtlas.findRegion("world/" + boon.getKind().getName() + "-stand");
-		Array<AtlasRegion> walkRegions = textureAtlas.findRegions("world/" + boon.getKind().getName() + "-walk");
+		String charKind = character.getKind().getName();
+		AtlasRegion standRegion = textureAtlas.findRegion("world/" + charKind + "-stand");
+		Array<AtlasRegion> walkRegions = textureAtlas.findRegions("world/" + charKind + "-walk");
 
 		// Création du Boon2D
-		return new Boon2D(boon, standRegion, walkRegions);
+		return new Character2D(character, standRegion, walkRegions);
 	}
 
 	/**
@@ -107,14 +113,14 @@ public class Boon2D extends Image {
 	@Override
 	public void act(float delta) {
 		super.act(delta);
-		moveShip(delta);
-		walkBoon(delta);
+		move(delta);
+		animateWalk(delta);
 	}
 
 	/**
 	 * Déplace le Boon dans l'écran
 	 */
-	private void moveShip(float delta) {
+	private void move(float delta) {
 		// Modifie la vitesse de déplacement suivant qu'on
 		// appuie sur gauche, droite ou rien.
 		if (Gdx.input.isKeyPressed(Input.Keys.LEFT)) {
@@ -132,8 +138,7 @@ public class Boon2D extends Image {
 		// nouvelle position par rapport aux dimensions du stage. Si nécessaire, 
 		// on corrige la position et on remet la vélocité à 0, afin que le boon
 		// arrête son déplacement.
-		float maxWidth = getStage().getWidth() - getWidth();
-		if (VectorUtils.adjustByRangeX(position, 0,	maxWidth)) {
+		if (VectorUtils.adjustByRangeX(position, 0,	maxX - getWidth())) {
 			velocity.x = 0;
 		}
 
@@ -145,7 +150,7 @@ public class Boon2D extends Image {
 	/**
 	 * Joue l'animation faisant marcher le boon dans la direction appropriée.
 	 */
-	private void walkBoon(float delta) {
+	private void animateWalk(float delta) {
 		// La frame de l'animation à afficher
 		TextureRegion frame;
 
@@ -177,5 +182,9 @@ public class Boon2D extends Image {
 		// Pas de soucis de performance si on définit la même frame plusieurs
 		// fois car la demande sera ignorée dans ce cas.
 		setDrawable(drawable);
+	}
+
+	public void setMaxPositionX(float maxX) {
+		this.maxX = maxX;
 	}
 }

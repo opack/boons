@@ -15,37 +15,44 @@ pages2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-world/hero-stand
+world/block-forest
   rotate: false
   xy: 0, 0
+  size: 88, 31
+  orig: 88, 31
+  offset: 0, 0
+  index: -1
+world/hero-stand
+  rotate: false
+  xy: 88, 13
   size: 15, 18
   orig: 15, 18
   offset: 0, 0
   index: -1
 world/hero-walk
   rotate: false
-  xy: 15, 0
+  xy: 103, 13
   size: 14, 18
   orig: 14, 18
   offset: 0, 0
   index: 1
 world/hero-walk
   rotate: false
-  xy: 29, 0
+  xy: 117, 13
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
   index: 0
 world/hero-walk
   rotate: false
-  xy: 29, 0
+  xy: 117, 13
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
   index: 2
 world/hero-walk
   rotate: false
-  xy: 42, 0
+  xy: 130, 13
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
