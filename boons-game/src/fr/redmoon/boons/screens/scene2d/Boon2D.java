@@ -18,7 +18,7 @@ import com.badlogic.gdx.scenes.scene2d.utils.Drawable;
 import com.badlogic.gdx.scenes.scene2d.utils.TextureRegionDrawable;
 import com.badlogic.gdx.utils.Array;
 
-import fr.redmoon.boons.domain.Boon;
+import fr.redmoon.boons.domain.characters.Boon;
 import fr.redmoon.boons.utils.VectorUtils;
 
 /**

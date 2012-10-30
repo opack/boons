@@ -1,4 +1,6 @@
-package fr.redmoon.boons.domain;
+package fr.redmoon.boons.domain.characters;
+
+import fr.redmoon.boons.domain.map.World;
 
 /**
  * Un Boon.

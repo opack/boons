@@ -42,10 +42,4 @@
 			<locationURI>LIBGDX/armeabi-v7a</locationURI>
 		</link>
 	</linkedResources>
-	<variableList>
-		<variable>
-			<name>LIBGDX</name>
-			<value>file:/C:/Progz/dev/libgdx-nightly-latest_0.9.6</value>
-		</variable>
-	</variableList>
 </projectDescription>

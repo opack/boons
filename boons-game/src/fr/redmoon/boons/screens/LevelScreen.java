@@ -3,8 +3,8 @@ package fr.redmoon.boons.screens;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 
 import fr.redmoon.boons.Boons;
-import fr.redmoon.boons.domain.Boon;
-import fr.redmoon.boons.domain.CharacterKind;
+import fr.redmoon.boons.domain.characters.Boon;
+import fr.redmoon.boons.domain.characters.CharacterKind;
 import fr.redmoon.boons.screens.scene2d.Boon2D;
 
 public class LevelScreen extends AbstractScreen {

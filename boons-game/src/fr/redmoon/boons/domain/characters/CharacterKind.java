@@ -1,4 +1,4 @@
-package fr.redmoon.boons.domain;
+package fr.redmoon.boons.domain.characters;
 
 
 /**
