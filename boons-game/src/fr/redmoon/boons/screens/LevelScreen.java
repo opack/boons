@@ -30,8 +30,12 @@ public class LevelScreen extends AbstractScreen {
 		
 	// Création de la région puis ajout à la scène
 		RegionBuilder builder = new RegionBuilder();
-		builder.appendBlock("forest")
-			.appendBlock("forest");
+		builder.appendBlock("cave-night")
+			.appendBlock("cave")
+			.appendBlock("forest")
+			.appendBlock("prairie")
+			.appendBlock("dungeon")
+			.appendBlock("shop");
 		region2D = new Region2D(builder.build(), getAtlas());
 		region2D.addBlocksToStage(stage);
 

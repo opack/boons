@@ -15,44 +15,79 @@ pages2.png
 format: RGBA8888
 filter: Nearest,Nearest
 repeat: none
-world/block-forest
+world/block-cave-night
+  rotate: false
+  xy: 0, 29
+  size: 86, 29
+  orig: 86, 29
+  offset: 0, 0
+  index: -1
+world/block-cave
   rotate: false
   xy: 0, 0
-  size: 88, 31
-  orig: 88, 31
+  size: 86, 29
+  orig: 86, 29
+  offset: 0, 0
+  index: -1
+world/block-dungeon
+  rotate: false
+  xy: 86, 29
+  size: 86, 29
+  orig: 86, 29
+  offset: 0, 0
+  index: -1
+world/block-forest
+  rotate: false
+  xy: 86, 0
+  size: 86, 29
+  orig: 86, 29
+  offset: 0, 0
+  index: -1
+world/block-prairie
+  rotate: false
+  xy: 172, 29
+  size: 86, 29
+  orig: 86, 29
+  offset: 0, 0
+  index: -1
+world/block-shop
+  rotate: false
+  xy: 172, 0
+  size: 86, 29
+  orig: 86, 29
   offset: 0, 0
   index: -1
 world/hero-stand
   rotate: false
-  xy: 88, 13
+  xy: 258, 40
   size: 15, 18
   orig: 15, 18
   offset: 0, 0
   index: -1
 world/hero-walk
   rotate: false
-  xy: 103, 13
+  xy: 258, 22
   size: 14, 18
   orig: 14, 18
   offset: 0, 0
   index: 1
 world/hero-walk
   rotate: false
-  xy: 117, 13
+  xy: 273, 40
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
   index: 0
 world/hero-walk
   rotate: false
-  xy: 117, 13
+  xy: 273, 40
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
   index: 2
 world/hero-walk
   rotate: false
-  xy: 130, 13
+  xy: 258, 4
   size: 13, 18
   orig: 13, 18
   offset: 0, 0
