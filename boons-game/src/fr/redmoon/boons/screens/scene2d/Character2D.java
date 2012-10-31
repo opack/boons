@@ -27,9 +27,9 @@ import fr.redmoon.boons.utils.VectorUtils;
 public class Character2D extends Image {
 	/**
 	 * La vitesse de déplacement du boon, en mètres par seconde. En se basant
-	 * sur une vitesse de marche de 5km/h, on obtient 1.4m/s.
+	 * sur une vitesse de marche rapide de 7.5km/h, on obtient 2.1m/s.
 	 */
-	private static final float SPEED = 1.4f * PIXELS_PER_METER;
+	private static final float SPEED = 2.1f * PIXELS_PER_METER;
 	
 	private final Vector2 position;
 	
@@ -164,6 +164,12 @@ public class Character2D extends Image {
 			if (!frame.isFlipX()) {
 				frame.flip(true, false);
 			}
+			// De même, on retourne l'image qui sera affichée lorsque le personnage
+			// va s'arrêter
+			TextureRegion stand = standFrame.getRegion();
+			if (!stand.isFlipX()) {
+				stand.flip(true, false);
+			}
 			drawable = walkAnimationDrawables.get(frame);
 		} else if (velocity.x > 0) {
 			frame = walkAnimation.getKeyFrame(walkAnimationStateTime += delta, true);
@@ -172,6 +178,10 @@ public class Character2D extends Image {
 			// vers la droite
 			if (frame.isFlipX()) {
 				frame.flip(true, false);
+			}
+			TextureRegion stand = standFrame.getRegion();
+			if (stand.isFlipX()) {
+				stand.flip(true, false);
 			}
 			drawable = walkAnimationDrawables.get(frame);
 		} else {
