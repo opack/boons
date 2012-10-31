@@ -65,7 +65,7 @@ public class Character2D extends Image {
 	/**
 	 * Le drawable utilisé lorsque le Boon ne bouge pas.
 	 */
-	private final Drawable standFrame;
+	private final TextureRegionDrawable standFrame;
 	
 	/**
 	 * Crée un nouveau personnage {@link Character2D}.
