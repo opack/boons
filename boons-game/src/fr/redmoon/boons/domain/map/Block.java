@@ -6,7 +6,7 @@ import java.util.List;
 import fr.redmoon.boons.domain.entity.IEntity;
 
 /**
- * Une petite zone composant une région. Chaque IBlock est composé d'un
+ * Une petite zone composant une région. Chaque Block est composé d'un
  * identifiant, d'une image de fond, et d'entités (avec lesquelles
  * il est possible d'interagir). 
  * 
